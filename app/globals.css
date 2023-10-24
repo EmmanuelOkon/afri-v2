@@ -9,3 +9,26 @@
   font-family: "Karla";
   outline: 0;
 }
+
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teamMember::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #F0F2F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #226A35;
+}
+

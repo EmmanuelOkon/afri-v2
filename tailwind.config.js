@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         lightGrey: "#F0F2F5",
         midGrey: "#344054",
+        grey500: "#667185",
         grey700: "#344054",
         deepGrey: "#101928",
         lemonGreen: "#8BC043",
@@ -28,5 +29,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

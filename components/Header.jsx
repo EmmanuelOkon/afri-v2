@@ -25,7 +25,8 @@ function classNames(...classes) {
 
 const Header = () => {
   return (
-    <header className="hidden lg:block bg-deepGrey text-white text-opacity-70 w-full h-full">
+    <>
+    <header className="hidden lg:block bg-deepGrey text-white text-opacity-70 w-full ">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between py-3 px-4 p6 lg:px-8"
         aria-label="Global"
@@ -68,7 +69,7 @@ const Header = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-0  focus:outline-none">
+              <Menu.Items className="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-0  focus:outline-none">
                 <div className="py-1">
                   {language.map((item, index) => (
                     <Menu.Item key={index}>
@@ -143,6 +144,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
+    </>
   );
 };
 

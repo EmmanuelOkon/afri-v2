@@ -1,0 +1,213 @@
+ {/* <div
+        className={`${
+          activeElement === index
+            ? "lg:flex lg:flex-col justify-end "
+            : "hidden"
+        } w-full top20 text-white bg-slate-300 slide relative min-h-[85vh]  max-h-[90vh] hidden -z-[50] `}
+        key={index}
+      >
+        <Image
+          src={carousel.img}
+          width={800}
+          height={500}
+          alt=""
+          className="w-full h-full absolute left-0 to0 object-cover"
+        />
+
+        
+        <div className="w-full mx-auto flex flex-col justify-center pb-8 pl-16 relative z30">
+          <p className="text-white font-bold text-2xl leading-[0.57px] font-raleway">
+            {carousel.name}
+          </p>
+
+          <div className="w-full py-4 flex 2xl:mt-[10%] justify-start items-center gap-2">
+            {carouselArr.map((carousel, index) => (
+              <div
+                className={`h-[6px] ${
+                  activeElement === index
+                    ? "w-12 bg-green "
+                    : "w-6 bg-lightGrey "
+                } rounded-lg  transition-transform cursor-pointer`}
+                key={index}
+                onClick={() => switchActiveElement(index)}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div> */}
+
+      {/* <div
+        id="default-carousel"
+        className="relative w-full z-[40]"
+        data-carousel="slide"
+      >
+        <div className="relative h-[80vh] overflow-hidden md:h-96">
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <Image
+              width={800}
+              height={400}
+              alt="carousel"
+              src="/heroOne.png"
+              className="absolut block w-full object-contain "
+            />
+          </div>
+
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <Image
+              width={800}
+              height={400}
+              alt="carousel"
+              src="/heroTwo.png"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            />
+          </div>
+
+          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <Image
+              width={800}
+              height={400}
+              alt="carousel"
+              src="/heroThree.png"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            />
+          </div>
+
+          <div className="hidde duration-700 ease-in-out" data-carousel-item>
+            <Image
+              width={800}
+              height={400}
+              alt="carousel"
+              src="/heroFour.png"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            />
+          </div>
+
+          <div className="hidde duration-700 ease-in-out" data-carousel-item>
+            <Image
+              width={800}
+              height={400}
+              alt="carousel"
+              src="/heroFive.png"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            />
+          </div>
+        </div>
+
+        <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+          <button
+            type="button"
+            className="w-3 h-3 rounded-full bg-red-500"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            className="w-3 h-3 rounded-full bg-red-500"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            className="w-3 h-3 rounded-full bg-red-500"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            className="w-3 h-3 rounded-full bg-red-500"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            className="w-3 h-3 rounded-full bg-red-500"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+
+        <button
+          type="button"
+          className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              className="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          type="button"
+          className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              className="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+          </span>
+        </button>
+      </div> */}
+
+
+       <div
+        className="bg-white bg-no-repeat bg-cover"
+        style={{ backgroundImage: `url(${carousel.img})` }}
+      >
+        <div className=" px-6 pt-14 lg:px-8">
+          <div className="mx-auto max-w-2xl py-32 sm:py48 lg:py56">
+            <div className="text-center">
+              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+                Premium, Fresh Produce from the Heart of Africa
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+              Explore our diverse selection of farm-fresh agricultural goods, sustainably cultivated in the heart of Africa, and experience the true essence of quality, taste, and tradition.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <a
+                  href="#"
+                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Get started
+                </a>
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
