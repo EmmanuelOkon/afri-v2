@@ -23,13 +23,16 @@ module.exports = {
         karla: ["Karla", "sans-serif"],
       },
       backgroundImage: {
+        heroFour: "url('/src/assets/images/hero_4.png')",
+        heroSix: "url('/src/assets/images/hero_6.png')",
+        heroSeven: "url('/src/assets/images/hero_7.png')",
+        heroEight: "url('/src/assets/images/hero_8.png')",
+        heroNine: "url('/src/assets/images/hero_9.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [],
 }
